@@ -109,5 +109,60 @@ document.addEventListener('DOMContentLoaded', () => {
             correctLevel: QRCode.CorrectLevel.H
         });
     }
+    // 6. Gallery Auto-Slider
+    const track = document.getElementById('galleryTrack');
+    const items = document.querySelectorAll('.gallery-item');
+    const prevBtn = document.getElementById('sliderPrev');
+    const nextBtn = document.getElementById('sliderNext');
+    const dotsContainer = document.getElementById('sliderDots');
+
+    if (track && items.length > 0) {
+        let currentIndex = 0;
+        const totalItems = items.length;
+
+        // Create dots
+        items.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+            resetInterval();
+        }
+
+        function slideNext() {
+            currentIndex = (currentIndex + 1) % totalItems;
+            updateSlider();
+        }
+
+        function slidePrev() {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            updateSlider();
+        }
+
+        if(nextBtn) nextBtn.addEventListener('click', () => { slideNext(); resetInterval(); });
+        if(prevBtn) prevBtn.addEventListener('click', () => { slidePrev(); resetInterval(); });
+
+        let slideInterval = setInterval(slideNext, 3500);
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(slideNext, 3500);
+        }
+    }
 
 });

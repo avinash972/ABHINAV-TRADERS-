@@ -143,23 +143,32 @@
                 <h2>Our Gallery</h2>
                 <p>Glimpses of our products and services.</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="assets/images/sarbottam-standee.jpg" alt="Sarbottam Cement Standee"
-                        onerror="this.src='https://placehold.co/300x450?text=Gallery+Standee';">
+            <div class="gallery-slider">
+                <div class="gallery-track" id="galleryTrack">
+                    <div class="gallery-item">
+                        <img src="assets/images/sarbottam-standee.jpg" alt="Sarbottam Cement Standee"
+                            onerror="this.src='https://placehold.co/300x450?text=Gallery+Standee';">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/sarbottam-53.jpg" alt="Sarbottam 53 Grade OPC"
+                            onerror="this.src='https://placehold.co/400x300?text=Sarbottam+53+Grade';">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/sarbottam-bags.jpg" alt="Sarbottam 43 Grade OPC"
+                            onerror="this.src='https://placehold.co/400x300?text=Sarbottam+43+Grade';">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/sarbottam-53-2.jpg" alt="Sarbottam Cement Display"
+                            onerror="this.src='https://placehold.co/300x450?text=Sarbottam+Cement';">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/images/shop-owners.jpg" alt="Shop Owners"
+                            onerror="this.src='https://placehold.co/400x300?text=Shop+Owners';">
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="assets/images/sarbottam-53.jpg" alt="Sarbottam 53 Grade OPC"
-                        onerror="this.src='https://placehold.co/400x300?text=Sarbottam+53+Grade';">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/sarbottam-bags.jpg" alt="Sarbottam 43 Grade OPC"
-                        onerror="this.src='https://placehold.co/400x300?text=Sarbottam+43+Grade';">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/images/sarbottam-53-2.jpg" alt="Sarbottam Cement Display"
-                        onerror="this.src='https://placehold.co/300x450?text=Sarbottam+Cement';">
-                </div>
+                <button class="slider-btn prev-btn" id="sliderPrev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next-btn" id="sliderNext" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+                <div class="slider-dots" id="sliderDots"></div>
             </div>
         </div>
     </section>
