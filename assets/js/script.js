@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Generate QR Code
     const qrcodeContainer = document.getElementById("qrcode");
     if (qrcodeContainer && typeof QRCode !== 'undefined') {
-        const websiteURL = "https://abhinavtraders.com"; // Replace with actual domain when live
+        const websiteURL = "https://abhinavtraders.in"; // Live Domain Set
         new QRCode(qrcodeContainer, {
             text: websiteURL,
             width: 128,
