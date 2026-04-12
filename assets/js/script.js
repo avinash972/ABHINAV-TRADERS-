@@ -96,19 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Generate QR Code
-    const qrcodeContainer = document.getElementById("qrcode");
-    if (qrcodeContainer && typeof QRCode !== 'undefined') {
-        const websiteURL = "https://abhinavtraders.in"; // Live Domain Set
-        new QRCode(qrcodeContainer, {
-            text: websiteURL,
-            width: 128,
-            height: 128,
-            colorDark: "#0f172a",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
-        });
-    }
+
     // 6. Gallery Auto-Slider
     const track = document.getElementById('galleryTrack');
     const items = document.querySelectorAll('.gallery-item');
